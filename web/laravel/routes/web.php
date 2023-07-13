@@ -1,7 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
+Route::get('/{any?}', fn() => view('index'))->where('any', '.+');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +12,3 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
